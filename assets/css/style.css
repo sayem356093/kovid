@@ -1,0 +1,405 @@
+/*common code start*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap');
+body{
+	font-family: 'Kumbh Sans', sans-serif;
+	margin: 0px;
+}
+*{
+	box-sizing: border-box;
+}
+.conatainer-fluid{
+	width: 100%;
+	height: auto;
+}
+.container{
+	width: 85%;
+	margin: 0px auto;
+}
+/*common code end*/
+
+/*header start*/
+header, .banner-2{
+	background: radial-gradient(circle, rgba(57, 52, 100, 0.5), rgba(0,0,0,0.5)) ,url(../img/banner.jpg);
+	background-size: cover;
+}
+/*nav start*/
+nav{
+	width: 100%;
+	display: flex;
+	padding-top: 30px;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar-brand{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 800;
+	text-decoration: none;
+}
+.navbar-brand i{
+	color: #E72729;
+}
+.navbar ul{
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+.navbar ul li{
+	list-style: none;
+}
+.navbar ul li a{
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 20px;
+	display: inline-block;
+	text-decoration: none;
+	transition: .5s;
+}
+.navbar ul li a:hover{
+	color: #E32B2B;
+}
+.navbar ul li:last-child a{
+	transition: .5s;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+.navbar ul li:last-child a i{
+	margin-right: 6px;
+}
+.navbar ul li:last-child a:hover{
+	background: #fff;
+}
+.click{
+	visibility: hidden;
+	position: relative;
+}
+
+@media (min-width: 0px) and (max-width: 700px){
+	.click{
+		visibility: visible;
+		transition: 0.5s;
+	}
+	.navbar{
+		position: absolute;
+		display: none;
+		z-index: 1;
+		min-width: 300px;
+		transition: 0.5s;
+	}
+	.nav-tog{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		background-color: black;
+	}
+	label{
+		position: absolute;
+		left: -300px;
+		top: -10px;
+		font-size: 40px;
+	}
+	.a{
+		position: absolute;
+		left: -300px;
+		visibility: hidden;
+	}
+	.click:hover .navbar{
+		display: block;
+		top: 30px;
+		left: -300px;
+	}
+	/*.a:checked ~ .navbar{
+		display: block;
+		top: 30px;
+		left: -300px;
+
+	}*/
+	/* (for dropdown hover).click:hover .navbar{
+		display: block;
+	}*/
+}
+@media (min-width: 700px){
+
+
+.click{
+	visibility: visible;
+}
+.click .a {
+	visibility: hidden;
+}
+label {
+	visibility: hidden;
+}
+}
+/*nav end*/
+
+/*banner start*/
+.banner{
+	width: 100%;
+}
+.banner-content{
+	max-width: 700px;
+	padding: 100px 0px;
+}
+.banner-content h1{
+	color: #fff;
+	font-size: 50px;
+	margin: 0px;
+}
+.banner-content p{
+	color: #fff;
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+.banner-content a{
+	color: #fff;
+	font-size: 18px;
+	transition: .5s;
+	padding: 15px 30px;
+	background: #E32B2B;
+	border-radius: 10px;
+	display: inline-block;
+	text-decoration: none;
+}
+.banner-content a:hover{
+	background: #ad1c1c;
+}
+/*banner end*/
+/*header end*/
+/*covid counter start*/
+.covid-counter{
+	padding: 70px 0px;
+}
+.counter{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.counter-content{
+	width: 225px;
+}
+.counter-content i{
+	padding: 30px;
+	color: #E32B2B;
+	font-size: 30px;
+	border-radius: 50%;
+	background: #F7F7F7;
+}
+.counter-content h2{
+	margin: 15px 0px;
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+.counter-content p{
+	margin: 0px;
+	color: #E32B2B;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+/*covid counter end*/
+/*covid-direction start*/
+.cov-dir{
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 150px 40px;
+}
+.dir-1{
+	width: 50%;
+}
+.dir-1 h2, p{
+	color: gray;
+}
+.cov-dir img{
+	border-radius: 15px;
+	margin-left: 25px;
+	height: 65%;
+}
+.dir-1 ul{
+	padding: 0px;
+}
+.dir-1 li{
+	list-style: none;
+	font-size: 20px;
+}
+.fa-check{
+	color: orange;
+}
+/*covid-direction end*/
+
+/*covid advise start*/
+.cov-adv{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	background: #F7F7F7;
+	padding: 150px 0px;
+}
+.adv-1{
+	width: 50%;
+	padding-left: 30px;
+}
+.adv-1 h3, p{
+	color: gray;
+}
+.adv-1 a{
+	color: #fff;
+	font-size: 18px;
+	transition: .5s;
+	padding: 15px 30px;
+	background: #E32B2B;
+	border-radius: 10px;
+	display: inline-block;
+	text-decoration: none;
+}
+.adv-2{
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+
+}
+.adv-2 div{
+	width: 35%;
+	margin: 40px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding: 25px 0px;
+	box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.9);
+}
+.adv-2 div:hover{
+	transform: translateY(-20px);
+}
+.adv-2 i{
+	padding: 20px;
+	color: #E32B2B;
+	font-size: 30px;
+	border-radius: 50%;
+	background: #F7F7F7;
+}
+.cov-adv-2{
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+}
+.cov-adv-2 h1, h3{
+	margin: 0px;
+}
+.adv-img{
+	ma-width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
+}
+.adv-img div{
+	width: 32%;
+	margin: 15px;
+	text-align: center;
+}
+.adv-img img{
+	width: 100%;
+	border-radius: 20px;
+}
+.adv-img div h2:hover{
+	color: #E32B2B;
+	transition: 0.7s;
+}
+.banner-2{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding-top: 40px;
+}
+iframe{
+	width: 100%;
+	height: 500px;
+	border: none;
+}
+
+.transform{
+	transition: 0.5s;
+}
+.transform:hover{
+	transform: scale(1.1);
+}
+.big-footer{
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 70px 0px;
+	background-color: #F8F9FA;
+	text-align: center;
+}
+.form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+form button{
+	color: #fff;
+	font-size: 30px;
+	transition: .5s;
+	padding: 13px 40px;
+	border-radius: 0px 10px 10px 0px ;
+	border: none;
+	background: #E32B2B;
+	display: inline-block;
+	text-decoration: none;
+}
+form input{
+	height: 60px;
+	width: 400px;
+	border-right: none;
+	border-left: 2px solid gray;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+form input[placeholder]{
+	font-size: 18px;
+}
+footer{
+	background-color: #151421;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 50px 30px;
+}
+footer div{
+	width: 25%;
+}
+footer h1{
+	color: white;
+}
+footer ul{
+	padding: 0px;
+}
+footer li{
+	list-style: none;
+	padding: 10px 0px;
+}
+footer a{
+	display: inline-block;
+	color: gray;
+	text-decoration: none;
+}
+footer a:hover{
+	color: #E32B2B;
+}
+/*covid advise end*/
